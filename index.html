@@ -14,43 +14,21 @@
 
 <script>
 function capturePhoto(){
-    navigator.camera.getPicture(uploadPhoto,null,{sourceType:1,quality:60});
-}
+    	navigator.camera.getPicture(onSuccess, onFail, { quality: 50,
+    	destinationType: Camera.DestinationType.DATA_URL
+		});
 
-function uploadPhoto(data){
-// this is where you would send the image file to server
+function onSuccess(imageData) {
+    	var image = document.getElementById('myImage');
+    	image.src = "data:image/jpeg;base64," + imageData;
+		}
 
-	cameraPic.src = "data:image/jpeg;base64," + data;
-	// Successful upload to the server
-	navigator.notification.alert(
-		'Your Photo has been uploaded',  // message
-		okay,                           // callback
-	    'Photo Uploaded',              // title
-	    'OK'                          // buttonName
-	);
-
-	// upload has failed Fail
-
-	/* 
-
-	if (failedToUpload){
-
-	navigator.notification.alert(
-		'Your Photo has failed to upload',
-		failedDismissed,
-	    'Photo Not Uploaded',
-	    'OK'
-		);
-
-	} 
-	*/
-
+function onFail(message) {
+   		 alert('Failed because: ' + message);
+		}
 
 }
 
-function okay(){
-	// Do something
-}
 </script>
 
 
@@ -70,9 +48,8 @@ function okay(){
   
   <div id="camera">
     <button class="camera-control" onclick="capturePhoto();">Capture Photo</button>
- 
     <div style="text-align:center;margin:20px;">
-        <img id="cameraPic" src="" style="width:auto;height:120px;"></img>
+        <img id="myImage" src="" style="width:auto;height:120px;"></img>
     </div>
 </div>
   
@@ -82,12 +59,10 @@ function okay(){
       <div class="ui-block-a"><a href="#" data-role="button">Pothole</a></div>
       <div class="ui-block-b"><a href="#" data-role="button">Graffiti</a></div>
       <div class="ui-block-c"><a href="#" data-role="button">Littering</a></div>
-      <div class="ui-block-a"><a href="#" data-role="button">Dog fouling</a></div>
+      <div class="ui-block-a"><a href="dogfouling.html" data-role="button">Dog fouling</a></div>
       <div class="ui-block-b"><a href="#" data-role="button">Missed bin</a></div>
-<div class="ui-block-c"><a href="#" data-role="button">Dead animal</a></div>
-      <div class="ui-block-a"><a href="#" data-role="button">Button</a></div>
-      <div class="ui-block-b"><a href="#" data-role="button">Button</a></div>
-      <div class="ui-block-c"><a href="#" data-role="button">Button</a></div>
+      <div class="ui-block-c"><a href="#" data-role="button">Dead animal</a></div>
+
     </div>
   </div>
   <div data-role="footer">
