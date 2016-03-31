@@ -18,6 +18,7 @@
 
     <!-- We'll include the Barcode plugin as an example -->
     <plugin name="cordova-plugin-camera" spec="1.2.0" source="pgb" />
+    <gap:plugin name="org.apache.cordova.camera" />
 </widget>
 
 
