@@ -4,9 +4,7 @@
     versionCode = "10"
     version     = "1.0.1" >
 
-    <!-- versionCode is optional and Android only -->
-
-    <name>Argyll and Bute Council app</name>
+    <name>Argyll and Bute Council mobileapp</name>
 
     <description>
       App to request and report services
@@ -16,8 +14,6 @@
       Lorne MacBrayne
     </author>
 
-    <!-- We'll include the Barcode plugin as an example -->
-    <plugin name="cordova-plugin-camera" spec="1.2.0" source="pgb" />
     <gap:plugin name="org.apache.cordova.camera" />
 </widget>
 
