@@ -13,6 +13,9 @@
     <author href="http://www.argyll-bute.gov.uk" email="enquiries@argyll-bute.gov.uk">
       Lorne MacBrayne
     </author>
+    
+    
+    <gap:plugin name="org.apache.cordova.camera" />
 
 </widget>
 
