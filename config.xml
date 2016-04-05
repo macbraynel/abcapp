@@ -17,6 +17,7 @@
     
     
     <gap:plugin name="org.apache.cordova.camera"/>
+    <plugin name="cordova-plugin-camera" spec="1.2.0" source="pgb" />
 
 </widget>
 
